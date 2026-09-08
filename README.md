@@ -16,7 +16,21 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can start editing the page by modifying `src/app/page.tsx`. The page auto-updates as you edit the file.
+
+## MONZA CITY: destacados y archivo
+
+El catálogo se edita en `src/data/projects.ts`, dentro de `projectCatalog`.
+
+- Para añadir un proyecto terminado, agrega una entrada con un `id` único, sus datos y `featured: false`. Aparecerá en Project Archive y en la ciudad secundaria.
+- Para destacar un proyecto, usa `featured: true` y `featuredOrder` (un número menor aparece primero). La avenida tiene un máximo de cinco lugares. Si hay más candidatos, los restantes permanecen en el archivo.
+- Las posiciones y las bases se calculan automáticamente. `city.scale` es opcional; sirve para personalizar las dimensiones.
+- `buildingVariant: "flagship"` usa la torre con plaza y corona. También están disponibles `operations`, `pets`, `agency`, `memorial`, `corporate`, `data`, `organic` y `legal`.
+- `repository` es opcional. La ficha muestra un enlace real cuando existe; no inventa URLs para proyectos sin repositorio conocido.
+
+La promoción es editorial, mediante el catálogo. Todavía no hay un CMS conectado ni detección automática de proyectos terminados.
+
+Validación: `npm run lint`, `npm run build` y `node --test tests/*.test.mjs` (Node 22.18 o posterior).
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 

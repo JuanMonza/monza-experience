@@ -1,41 +1,182 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# =========================================================
+# MONZA EXPERIENCE - GITIGNORE
+# Next.js / React / TypeScript
+# =========================================================
 
-# dependencies
+
+# Dependencies
 /node_modules
-/.pnp
+/jspm_packages
+/web_modules
+.pnp
 .pnp.*
+
+
+# Next.js
+/.next
+/out
+
+
+# Production
+/build
+
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+
+# Diagnostic reports
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+
+# Coverage
+coverage
+*.lcov
+.nyc_output
+
+
+# Testing
+/coverage
+
+
+# npm cache
+.npm
+
+
+# pnpm
+.pnpm-store
+
+
+# Yarn
+.yarn-integrity
 .yarn/*
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases
+!.yarn/sdks
 !.yarn/versions
 
-# testing
-/coverage
 
-# next.js
-/.next/
-/out/
+# ESLint
+.eslintcache
 
-# production
-/build
 
-# misc
-.DS_Store
-*.pem
+# Stylelint
+.stylelintcache
 
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# REPL history
+.node_repl_history
 
-# vercel
+
+# npm pack
+*.tgz
+
+
+# Parcel
+.cache
+.parcel-cache
+
+
+# Vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+.vite/
+
+
+# Nuxt
+.nuxt
+dist
+.output
+
+
+# Gatsby
+.cache/
+
+
+# VuePress
+.vuepress/dist
+.temp
+
+
+# SvelteKit
+.svelte-kit/
+
+
+# VitePress
+**/.vitepress/dist
+**/.vitepress/cache
+
+
+# Docusaurus
+.docusaurus
+
+
+# Serverless
+.serverless/
+
+
+# FuseBox
+.fusebox/
+
+
+# DynamoDB Local
+.dynamodb/
+
+
+# Firebase
+.firebase/
+
+
+# TernJS
+.tern-port
+
+
+# VSCode testing
+.vscode-test
+
+
+# Vercel
 .vercel
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+
+# OS files
+.DS_Store
+Thumbs.db
+
+
+# Certificates
+*.pem
+
+
+# IDE
+.idea/
+
+
+# Temporary files
+*.tmp
+*.temp
